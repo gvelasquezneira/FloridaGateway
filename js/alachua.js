@@ -1,31 +1,28 @@
-let countyData;
+let countyData = {};
+
 fetch('js/json.json')
     .then(response => response.json())
     .then(data => {
         countyData = data;
-        populateCountyList();
-    });
+    })
+    .catch(error => console.error('Error loading JSON:', error));
 
-function populateCountyList() {
-    const countyList = document.getElementById('countyList');
-    for (const county in countyData) {
-        const li = document.createElement('li');
-        li.className = 'nav-item mb-2';
-        li.innerHTML = `
-            <a class="btn btn-outline-primary w-100 text-center sidebar-btn rounded-pill" href="#" onclick="loadCounty('${county}')">
-                <i class="bi bi-geo-alt-fill"></i> ${countyData[county].name}
-            </a>
-        `;
-        countyList.appendChild(li);
+const dropdownMenu = document.querySelector('.dropdown-menu');
+dropdownMenu.addEventListener('click', (e) => {
+    const selectedCounty = e.target.textContent.trim();
+    if (countyData[selectedCounty.toLowerCase()]) {
+        loadCounty(selectedCounty.toLowerCase());
     }
-}
+});
 
 function loadCounty(countyId) {
     const county = countyData[countyId];
+    if (!county) return;
+
     const contentArea = document.getElementById('countyContent');
     const welcomeSection = document.getElementById('welcomeSection');
     let websiteList = '';
-    
+
     county.websites.forEach(site => {
         websiteList += `
             <div class="col-md-6 mb-4">
@@ -46,7 +43,6 @@ function loadCounty(countyId) {
         </div>
         ${websiteList}
     `;
-
     welcomeSection.style.display = 'none';
     contentArea.style.display = 'flex';
 }
