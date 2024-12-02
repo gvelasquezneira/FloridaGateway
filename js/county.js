@@ -23,21 +23,50 @@ function loadCounty(countyId) {
 
     const contentArea = document.getElementById('countyContent');
     const welcomeSection = document.getElementById('welcomeSection');
-    let websiteList = '';
+    contentArea.innerHTML = '';
+
+    contentArea.innerHTML += `<div class="col-12 mb-4"><h2>${county.name}</h2></div>`;
 
     county.websites.forEach(site => {
         let buttons = '';
-        if (Array.isArray(site.urls)) {
+
+        if (site.urls) {
             site.urls.forEach((url, index) => {
-                buttons += `<a href="${url}" class="btn btn-primary mb-2 me-2" target="_blank">Link ${index + 1}</a>`;
+                let buttonText = '';
+                switch (index) {
+                    case 0:
+                        buttonText = 'County';
+                        break;
+                    case 1:
+                        buttonText = 'Board';
+                        break;
+                    case 2:
+                        buttonText = 'Map';
+                        break;
+                    case 3:
+                        buttonText = 'Meetings';
+                        break;
+                    default:
+                        buttonText = `Link ${index + 1}`;
+                        break;
+                }
+                buttons += `<a href="${url}" class="btn btn-primary mb-2 me-2" target="_blank">${buttonText}</a>`;
             });
         } else if (site.url) {
-            buttons = `<a href="${site.url}" class="btn btn-primary mb-2 me-2" target="_blank">Visit Website</a>`;
+            let buttonText = '';
+            if (site.name === "Sheriff's Office") {
+                buttonText = "Sheriff's Website";
+            } else if (site.name === "Property Appraiser") {
+                buttonText = "Appraiser Site";
+            } else {
+                buttonText = "Visit Website";
+            }
+            buttons = `<a href="${site.url}" class="btn btn-primary mb-2 me-2" target="_blank">${buttonText}</a>`;
         }
 
-        websiteList += `
-            <div class="website col-md-6 mb-4">
-                <div class="card h-100">
+        contentArea.innerHTML += `
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">${site.name}</h5>
                         <p class="card-text">${site.description}</p>
@@ -48,13 +77,8 @@ function loadCounty(countyId) {
         `;
     });
 
-    contentArea.innerHTML = `
-        <div class="col-12 mb-4">
-            <h2>${county.name}</h2>
-        </div>
-        ${websiteList}
-    `;
     welcomeSection.style.display = 'none';
     contentArea.style.display = 'flex';
 }
+
     
