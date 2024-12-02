@@ -1,3 +1,13 @@
+// Load county data
+let countyData;
+fetch('data/counties.json')
+    .then(response => response.json())
+    .then(data => {
+        countyData = data;
+        populateCountyDropdown();
+        populateCountyList();
+    });
+
 function loadCounty(countyId) {
     const county = countyData[countyId];
     if (!county) return;
