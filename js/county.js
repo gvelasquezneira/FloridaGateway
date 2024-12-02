@@ -1,4 +1,3 @@
-// Load county data
 let countyData;
 fetch('js/county.json')
     .then(response => response.json())
