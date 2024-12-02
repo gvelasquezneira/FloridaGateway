@@ -7,9 +7,8 @@
         "urls": [
           "https://alachuacounty.us/",
           "https://acgm.maps.arcgis.com/apps/instant/basic/index.html?appid=675274e039a6454a81a46fc44d30a453"
-          "https://alachua.granicus.com/ViewPublisher.php?view_id=8"
         ],
-        "description": "Find the meetings."
+        "description": "Find the meetings, see who represents each district, find contact information and a map of the districts. "
       },
       {
         "name": "Sheriff's Office",
