@@ -3,8 +3,8 @@ let countyData = {};
 fetch('js/county.json')
     .then(response => response.json())
     .then(data => {
-        countyData = data; // Store the JSON data
-        populateCountyDropdown(); // Populate dropdown after loading data
+        countyData = data; 
+        populateCountyDropdown();
     })
 
 function populateCountyDropdown() {
