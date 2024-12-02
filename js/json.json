@@ -3,9 +3,13 @@
     "name": "Alachua County",
     "websites": [
       {
-        "name": "County Website",
-        "url": "https://alachuacounty.us/",
-        "description": "Official website for Alachua County government services and information."
+        "name": "Alachua County Commission",
+        "urls": [
+          "https://alachuacounty.us/",
+          "https://acgm.maps.arcgis.com/apps/instant/basic/index.html?appid=675274e039a6454a81a46fc44d30a453"
+          "https://alachua.granicus.com/ViewPublisher.php?view_id=8"
+        ],
+        "description": "Find the meetings."
       },
       {
         "name": "Sheriff's Office",

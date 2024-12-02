@@ -13,7 +13,7 @@ nav {
     font-family: 'Poppins', 'Afacad Flux', Verdana, sans-serif;
 }
 
-h1, h4, h5 {
+h1, h2, h4, h5 {
     font-family: 'Poppins', 'Afacad Flux', Verdana, sans-serif;
 }
 
@@ -31,6 +31,10 @@ p, ul {
 .dashboard p {
     font-family: 'Poppins', 'Afacad Flux', Verdana, sans-serif;
     text-align: left; /* Align text to the left */
+}
+
+.website {
+    font-family: 'Poppins', 'Afacad Flux', Verdana, sans-serif;
 }
 
 
