@@ -1,0 +1,17 @@
+{
+  "alachua": {
+    "name": "Alachua County",
+    "websites": [
+      {
+        "name": "County Website",
+        "url": "https://alachuacounty.us/",
+        "description": "Official website for Alachua County government services and information."
+      },
+      {
+        "name": "Sheriff's Office",
+        "url": "https://acso.us/",
+        "description": "Alachua County Sheriff's Office website for law enforcement services and public safety information."
+      }
+    ]
+  }
+}
