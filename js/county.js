@@ -4,18 +4,7 @@ fetch('js/county.json')
     .then(response => response.json())
     .then(data => {
         countyData = data;
-        populateCountyDropdown();
     });
-
-function populateCountyDropdown() {
-    const dropdown = document.getElementById('countyDropdown');
-    
-    for (const county in countyData) {
-        const li = document.createElement('li');
-        li.innerHTML = `<a class='dropdown-item' href='#' onclick='loadCounty("${county}")'>${countyData[county].name}</a>`;
-        dropdown.appendChild(li);
-    }
-}
 
 function loadCounty(countyId) {
     const county = countyData[countyId];
