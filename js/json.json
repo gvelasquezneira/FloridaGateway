@@ -14,6 +14,16 @@
         "name": "Sheriff's Office",
         "url": "https://acso.us/",
         "description": "Alachua County Sheriff's Office website for law enforcement services and public safety information."
+      },
+      {
+        "name": "County Jail",
+        "url": "https://asosite.alachuasheriff.org/ASOInmateLookup.aspx",
+        "description": "Find inmates in the Alachua County jail. The site allows you to learn an inmates age, sex, race, their pod and when they were booked."
+      },
+      {
+        "name": "Property Appraiser",
+        "url": "https://www.acpafl.org/",
+        "description": "Find the owner of a house by typing in the address. You can also find the amount of properties a person or comapany owns and where."
       }
     ]
   }
