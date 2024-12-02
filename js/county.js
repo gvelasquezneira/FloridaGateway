@@ -1,6 +1,6 @@
 // Load county data
 let countyData;
-fetch('data/counties.json')
+fetch('js/county.json')
     .then(response => response.json())
     .then(data => {
         countyData = data;
