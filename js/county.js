@@ -1,11 +1,21 @@
 let countyData;
+
 fetch('js/county.json')
     .then(response => response.json())
     .then(data => {
         countyData = data;
         populateCountyDropdown();
-        populateCountyList();
     });
+
+function populateCountyDropdown() {
+    const dropdown = document.getElementById('countyDropdown');
+    
+    for (const county in countyData) {
+        const li = document.createElement('li');
+        li.innerHTML = `<a class='dropdown-item' href='#' onclick='loadCounty("${county}")'>${countyData[county].name}</a>`;
+        dropdown.appendChild(li);
+    }
+}
 
 function loadCounty(countyId) {
     const county = countyData[countyId];
@@ -44,6 +54,7 @@ function loadCounty(countyId) {
         </div>
         ${websiteList}
     `;
+    
     welcomeSection.style.display = 'none';
     contentArea.style.display = 'flex';
 }
