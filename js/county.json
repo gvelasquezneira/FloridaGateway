@@ -1,30 +1,27 @@
 {
   "alachua": {
-    "name": "Alachua County",
-    "websites": [
-      {
-        "name": "Alachua County Commission",
-        "urls": [
-          "https://alachuacounty.us/",
-          "https://acgm.maps.arcgis.com/apps/instant/basic/index.html?appid=675274e039a6454a81a46fc44d30a453"
-        ],
-        "description": "Find the meetings, see who represents each district, find contact information and a map of the districts."
-      },
-      {
-        "name": "Sheriff's Office",
-        "url": "https://acso.us/",
-        "description": "Alachua County Sheriff's Office website for law enforcement services and public safety information."
-      },
-      {
-        "name": "County Jail",
-        "url": "https://asosite.alachuasheriff.org/ASOInmateLookup.aspx",
-        "description": "Find inmates in the Alachua County jail. The site allows you to learn an inmates age, sex, race, their pod and when they were booked."
-      },
-      {
-        "name": "Property Appraiser",
-        "url": "https://www.acpafl.org/",
-        "description": "Find the owner of a house by typing in the address. You can also find the amount of properties a person or comapany owns and where."
-      }
-    ]
+      "name": "Alachua County",
+      "websites": [
+          {
+              "name": "County Website",
+              "url": "https://alachuacounty.us/",
+              "description": "Official website of Alachua County."
+          },
+          {
+              "name": "Sheriff's Office",
+              "url": "https://acso.us/",
+              "description": "Alachua County Sheriff's Office for law enforcement services."
+          }
+      ]
+  },
+  "levy": {
+      "name": "Levy County",
+      "websites": [
+          {
+              "name": "County Website",
+              "url": "https://levycounty.org/",
+              "description": "Official website of Levy County."
+          }
+      ]
   }
 }
